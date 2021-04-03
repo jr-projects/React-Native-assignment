@@ -11,23 +11,23 @@ import CategoriesPage from './pages/categories';
 import ProductsPage from './pages/products';
 import ProductPage from './pages/product';
 
-const Stack = createStackNavigator();
+const {Navigator, Screen} = createStackNavigator();
 
 export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
+        <Navigator>
+          <Screen
               name="Login"
               component={LoginPage}
               options={{ title: 'LabKart' }}
             />
-            <Stack.Screen name="Dashboard" component={DashboardPage} />
-            <Stack.Screen name="Categories" component={CategoriesPage} />
-            <Stack.Screen name="Products" component={ProductsPage} />
-            <Stack.Screen name="Product" component={ProductPage} />
-        </Stack.Navigator>
+            <Screen name="Dashboard" component={DashboardPage} />
+            <Screen name="Categories" component={CategoriesPage} />
+            <Screen name="Products" component={ProductsPage} />
+            <Screen name="Product" component={ProductPage} />
+        </Navigator>
       </NavigationContainer>
     </Provider>
   );
