@@ -7,7 +7,7 @@ import Variables from '../styles/variables';
 import TextStyles from '../styles/text';
 
 export default LoginPage = ({navigation}) => {
-    const [text, onChangeText] = React.useState("");
+    const [name, onChangeName] = React.useState("");
 
     const onLoginClick = () => {
         if(text) {
@@ -29,8 +29,8 @@ export default LoginPage = ({navigation}) => {
             <TextInput
                 style={style.input}
                 placeholder="Enter name"
-                onChangeText={onChangeText}
-                value={text}
+                onChangeText={onChangeName}
+                value={name}
             />
             <Button
                 style={[ButtonStyle.btn]}
